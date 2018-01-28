@@ -1,0 +1,47 @@
+<!--
+	* Problem 5 *
+	Find the smallest positive number divisible by all prime numbers
+	between 1 and 20
+ -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Euler Project:Problem 5</title>
+
+	<script type="text/javascript">
+
+		function solve() {
+			// Initializes the variables for keeping the loop open and for the index
+			var v = false;
+			var n = 1;
+
+
+			while(v == false){
+				// Checks to see if the number is divisible by all of the primes
+				if(n % 2 == 0 && n % 3 == 0 && n % 5 == 0 && n % 7 == 0 && n % 9 == 0 && n % 11 == 0 && n % 13 == 0 && n % 17 == 0 && n % 19 == 0){
+					// Prints the number to the console
+					console.log(n);
+					// Turns v true to stop the loop
+					v = true;
+				}
+				else{
+					n += 1;
+				}
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<button onclick="solve()">Solve</button>
+
+</body>
+
+</html>
